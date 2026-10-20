@@ -12,7 +12,7 @@
       "name": "spacery",
       "source": "./",
       "description": "Publish 3D captures (laser scans, E57, Matterport exports, Gaussian splats, 360 photos and video) as Spacery spaces, and build guided tours and scavenger hunts in them",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "category": "productivity",
       "homepage": "https://spacery.dev"
     }

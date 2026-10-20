@@ -3,7 +3,7 @@
   "name": "io.github.lukehollis/spacery",
   "title": "Spacery",
   "description": "Publish 3D scans, Gaussian splats and 360 tours as shareable spaces, and build guided tours in them",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "websiteUrl": "https://spacery.dev",
   "repository": {
     "url": "https://github.com/lukehollis/spacery",
@@ -25,9 +25,9 @@
   "packages": [
     {
       "registryType": "mcpb",
-      "identifier": "https://github.com/lukehollis/spacery/releases/download/v0.2.2/spacery.mcpb",
-      "version": "0.2.2",
-      "fileSha256": "71ebe7082e5f00227c03ba6b703e6189a1440630242e044625c625709f0d7d6c",
+      "identifier": "https://github.com/lukehollis/spacery/releases/download/v0.2.3/spacery.mcpb",
+      "version": "0.2.3",
+      "fileSha256": "8bb99e35827adf7406371733c3b1c48a4a458181f0bc0a97305b3f2812b69dbe",
       "transport": {
         "type": "stdio"
       }

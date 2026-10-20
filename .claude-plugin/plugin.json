@@ -1,6 +1,6 @@
 {
   "name": "spacery",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Publish 3D captures (laser scans, E57, Matterport exports, Gaussian splats, 360 photos and video) as Spacery spaces, and build guided tours and scavenger hunts in them",
   "author": {
     "name": "Luke Hollis",

@@ -23,7 +23,7 @@ Free to try. Hosting from $5 a month ([pricing](https://app.spacery.dev/pricing)
 | | Local connector | Hosted connector |
 |---|---|---|
 | Runs | on your computer, over stdio | on Spacery, over Streamable HTTP |
-| Address | `npx -y https://spacery.dev/agents/spacery-0.2.2.tgz` | `https://app.spacery.dev/mcp` |
+| Address | `npx -y https://spacery.dev/agents/spacery-0.2.3.tgz` | `https://app.spacery.dev/mcp` |
 | Reads files on your computer | yes, and uploads them in the background with resume | no, it takes files the agent holds and gives you a page to drop the rest on |
 | Use it in | Claude Code, Claude Desktop, Codex, Grok Build, Antigravity, Gemini CLI, Cursor | claude.ai, ChatGPT, grok.com, Meta Muse and other apps that take a connector URL |
 
@@ -41,7 +41,7 @@ claude plugin install spacery@spacery
 Or the connector alone.
 
 ```bash
-claude mcp add --scope user spacery -- npx -y https://spacery.dev/agents/spacery-0.2.2.tgz
+claude mcp add --scope user spacery -- npx -y https://spacery.dev/agents/spacery-0.2.3.tgz
 ```
 
 Claude Desktop. Download [spacery.mcpb](https://spacery.dev/agents/spacery.mcpb) and open it.
@@ -49,7 +49,7 @@ Claude Desktop. Download [spacery.mcpb](https://spacery.dev/agents/spacery.mcpb)
 Codex.
 
 ```bash
-codex mcp add spacery -- npx -y https://spacery.dev/agents/spacery-0.2.2.tgz
+codex mcp add spacery -- npx -y https://spacery.dev/agents/spacery-0.2.3.tgz
 ```
 
 Gemini CLI.
@@ -61,13 +61,13 @@ gemini extensions install https://github.com/lukehollis/spacery
 Grok Build.
 
 ```bash
-grok mcp add spacery -- npx -y https://spacery.dev/agents/spacery-0.2.2.tgz
+grok mcp add spacery -- npx -y https://spacery.dev/agents/spacery-0.2.3.tgz
 ```
 
 Antigravity.
 
 ```bash
-agy mcp add spacery -- npx -y https://spacery.dev/agents/spacery-0.2.2.tgz
+agy mcp add spacery -- npx -y https://spacery.dev/agents/spacery-0.2.3.tgz
 ```
 
 Cursor and any other agent that reads an `mcpServers` config.
@@ -75,7 +75,7 @@ Cursor and any other agent that reads an `mcpServers` config.
 ```json
 {
   "mcpServers": {
-    "spacery": { "command": "npx", "args": ["-y", "https://spacery.dev/agents/spacery-0.2.2.tgz"] }
+    "spacery": { "command": "npx", "args": ["-y", "https://spacery.dev/agents/spacery-0.2.3.tgz"] }
   }
 }
 ```

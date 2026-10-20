@@ -14,15 +14,17 @@ uploads files straight from this computer, resumes after interruptions and keeps
    instead of searching their disk. One capture is one space.
 2. `link_account` when not linked. A browser page opens where the person approves a short code.
    Never ask for a password.
-3. Before the first space, `list_plans` and let the person choose. Pay as you go is the default.
-4. `create_space` with the suggested title. If hosting needs payment, Stripe Checkout opens in the
-   browser for the person to pay. Never ask for card details. Then `wait_for_payment`.
+3. `create_space` with the suggested title. The account's first space is a free private preview: no
+   payment comes before the files upload, and the result stays private for a few days. A later space, or
+   a used-up preview, opens Stripe Checkout in the browser for the person to pay (`list_plans` shows
+   the prices). Never ask for card details. Then `wait_for_payment`.
 5. `upload_files` with every file of the capture in one call, with `notes` when the person says what the
    capture is or how the tour should go. It returns at once and submits the space when the upload ends.
    Captures become a 3DGS (3D Gaussian splat) by default, and E57 scans a 360 panorama tour; pass
    `output: "tour"` or `output: "splat"` only when the person asks for the other one.
 6. Tell the person roughly how long the upload will take (`space_status`) and that Spacery emails them
-   when the space is ready. Spaces start private; `set_visibility` only when they ask to share.
+   when the space is ready. Spaces start private; `set_visibility` only when they ask to share. A free
+   preview cannot go public until hosting starts, so `set_visibility` opens Stripe Checkout for them to pay.
 
 ## Tours and scavenger hunts
 
@@ -64,19 +66,19 @@ The same tools run from a shell, which helps right after installing, before the 
 servers. Arguments are JSON.
 
 ```bash
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call check_files '{"paths":["/path/to/capture"]}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call link_account
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call list_plans
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call create_space '{"title":"Riverside studio"}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call wait_for_payment '{"space_id":"<id>"}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call upload_files '{"space_id":"<id>","paths":["/path/to/capture"]}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call space_status '{"space_id":"<id>"}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call find_tour_spaces '{"query":"pyramid"}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call create_tour '{"scene_id":"<sceneId>","kind":"hunt","title":"Treasures of the pyramid"}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call draft_tour '{"tour_id":"<id>","request":"A hunt for five artifacts, ending in a line drawing"}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call wait_for_tour '{"tour_id":"<id>"}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call upload_model '{"tour_id":"<id>","path":"/path/to/model.glb"}'
-npx -y https://spacery.dev/agents/spacery-0.2.2.tgz call upload_sky '{"tour_id":"<id>","path":"/path/to/sky.jpg"}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call check_files '{"paths":["/path/to/capture"]}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call link_account
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call list_plans
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call create_space '{"title":"Riverside studio"}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call wait_for_payment '{"space_id":"<id>"}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call upload_files '{"space_id":"<id>","paths":["/path/to/capture"]}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call space_status '{"space_id":"<id>"}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call find_tour_spaces '{"query":"pyramid"}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call create_tour '{"scene_id":"<sceneId>","kind":"hunt","title":"Treasures of the pyramid"}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call draft_tour '{"tour_id":"<id>","request":"A hunt for five artifacts, ending in a line drawing"}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call wait_for_tour '{"tour_id":"<id>"}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call upload_model '{"tour_id":"<id>","path":"/path/to/model.glb"}'
+npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call upload_sky '{"tour_id":"<id>","path":"/path/to/sky.jpg"}'
 ```
 
 Agents that run in the cloud and cannot reach this computer can use the hosted connector at https://app.spacery.dev/mcp.
