@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.lukehollis/spacery",
+  "title": "Spacery",
+  "description": "Publish 3D scans, Gaussian splats and 360 tours as shareable spaces, and build guided tours in them",
+  "version": "0.2.2",
+  "websiteUrl": "https://spacery.dev",
+  "repository": {
+    "url": "https://github.com/lukehollis/spacery",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/lukehollis/spacery/main/assets/icon.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.spacery.dev/mcp"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/lukehollis/spacery/releases/download/v0.2.2/spacery.mcpb",
+      "version": "0.2.2",
+      "fileSha256": "71ebe7082e5f00227c03ba6b703e6189a1440630242e044625c625709f0d7d6c",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
