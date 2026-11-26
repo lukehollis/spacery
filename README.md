@@ -6,6 +6,8 @@
 This repository holds the Spacery connector (an MCP server) and agent skill, so your agent can publish
 captures for you and build tours and scavenger hunts in them.
 
+[![Spacery MCP server on Glama](https://glama.ai/mcp/servers/lukehollis/spacery/badges/score.svg)](https://glama.ai/mcp/servers/lukehollis/spacery)
+
 - Publish E57 and other laser scans, Matterport exports, 3D Gaussian splats, 360 photos and video, meshes
   and photo sets as spaces, straight from your computer.
 - Build guided tours and scavenger hunts in your own spaces or Spacery's public ones (museums, temples,

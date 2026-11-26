@@ -1,10 +1,10 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.lukehollis/spacery",
-  "title": "Spacery",
-  "description": "Publish 3D scans, Gaussian splats and 360 tours as shareable spaces, and build guided tours in them",
-  "version": "0.2.3",
-  "websiteUrl": "https://spacery.dev",
+  "title": "Spacery: Matterport and 3D scan hosting",
+  "description": "Paste a Matterport link and host the tour. Also E57 laser scans, Gaussian splats and 360 tours.",
+  "version": "0.2.4",
+  "websiteUrl": "https://spacery.dev/agents?utm_source=mcp-registry&utm_medium=mcp-directory",
   "repository": {
     "url": "https://github.com/lukehollis/spacery",
     "source": "github"
@@ -13,7 +13,9 @@
     {
       "src": "https://raw.githubusercontent.com/lukehollis/spacery/main/assets/icon.png",
       "mimeType": "image/png",
-      "sizes": ["512x512"]
+      "sizes": [
+        "512x512"
+      ]
     }
   ],
   "remotes": [
