@@ -1,0 +1,18 @@
+{
+  "name": "spacery",
+  "displayName": "Spacery",
+  "version": "0.2.4",
+  "description": "Host Matterport virtual tours and links, E57 laser scans, 3D Gaussian splats and 360 photos as 3D spaces shared by link, and build guided tours and scavenger hunts in them.",
+  "logo": "assets/icon.png",
+  "author": {
+    "name": "Luke Hollis",
+    "url": "https://spacery.dev"
+  },
+  "homepage": "https://spacery.dev",
+  "repository": "https://github.com/lukehollis/spacery",
+  "suggestedPrompts": [
+    "Host my Matterport tour on Spacery and give me the preview link",
+    "List my Spacery spaces and tell me which ones are public",
+    "Build a five-stop guided tour inside my studio space on Spacery"
+  ]
+}
