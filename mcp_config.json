@@ -1,11 +1,7 @@
 {
   "mcpServers": {
     "spacery": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "https://spacery.dev/agents/spacery-0.2.3.tgz"
-      ]
+      "url": "https://app.spacery.dev/mcp"
     }
   }
 }
