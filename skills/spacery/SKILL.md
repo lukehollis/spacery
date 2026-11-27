@@ -59,26 +59,3 @@ temples, tombs, gardens) and gets its own link.
    "put the model at <address> by the altar".
 7. Tours start private. `share_tour` with `public: true` when the person wants a link. The person can
    fine tune anything in the browser editor that every tool reply links to.
-
-## Without the MCP tools loaded
-
-The same tools run from a shell, which helps right after installing, before the agent reloads its MCP
-servers. Arguments are JSON.
-
-```bash
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call check_files '{"paths":["/path/to/capture"]}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call link_account
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call list_plans
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call create_space '{"title":"Riverside studio"}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call wait_for_payment '{"space_id":"<id>"}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call upload_files '{"space_id":"<id>","paths":["/path/to/capture"]}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call space_status '{"space_id":"<id>"}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call find_tour_spaces '{"query":"pyramid"}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call create_tour '{"scene_id":"<sceneId>","kind":"hunt","title":"Treasures of the pyramid"}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call draft_tour '{"tour_id":"<id>","request":"A hunt for five artifacts, ending in a line drawing"}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call wait_for_tour '{"tour_id":"<id>"}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call upload_model '{"tour_id":"<id>","path":"/path/to/model.glb"}'
-npx -y https://spacery.dev/agents/spacery-0.2.3.tgz call upload_sky '{"tour_id":"<id>","path":"/path/to/sky.jpg"}'
-```
-
-Agents that run in the cloud and cannot reach this computer can use the hosted connector at https://app.spacery.dev/mcp.
