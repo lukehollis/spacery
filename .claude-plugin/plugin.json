@@ -1,7 +1,7 @@
 {
   "name": "spacery",
   "version": "0.2.4",
-  "description": "Publish 3D captures (laser scans, E57, Matterport exports, Gaussian splats, 360 photos and video) as Spacery spaces, and build guided tours and scavenger hunts in them",
+  "description": "Paste a Matterport link and host the tour. Publish Matterport exports, E57 laser scans, Gaussian splats and 360 photos as Spacery 3D spaces, and build guided tours and scavenger hunts in them",
   "author": {
     "name": "Luke Hollis",
     "url": "https://spacery.dev"
@@ -24,5 +24,10 @@
       "type": "http",
       "url": "https://app.spacery.dev/mcp"
     }
-  }
+  },
+  "displayName": "Spacery",
+  "privacyPolicyUrl": "https://app.spacery.dev/privacy",
+  "termsOfServiceUrl": "https://app.spacery.dev/terms",
+  "documentationUrl": "https://spacery.dev/agents.md",
+  "supportUrl": "https://github.com/lukehollis/spacery/issues"
 }
